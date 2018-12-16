@@ -64,7 +64,7 @@ public class ExcelXlsxReader {
     public ExcelXlsxReader(String file) throws ExcelReaderException {
         this.file = file;
         try {
-            OPCPackage pkg = OPCPackage.open(file, PackageAccess.READ);
+            pkg = OPCPackage.open(file, PackageAccess.READ);
             xssfReader = new XSSFReader(pkg);
             styles = xssfReader.getStylesTable();
             stringsTable = new ReadOnlySharedStringsTable(pkg);
